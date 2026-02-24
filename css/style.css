@@ -171,28 +171,35 @@ top:50px;
      margin-bottom: 25px;
 }
 .hero_btn{
-    width: 160px;
-    height: 38px;
-    border-radius: 20px;
+    width: 140px;
+    height: 53px;
+    /* border-radius: 20px; */
     border: 1px solid #ffeeee6f;
     /* background: #a98c87; */
     background-color: #a37b74b3;;
     /* background-color: #c3948c; */
     color:#ffffff;
     font-weight: 800px;
-    font-size: 13px;
+    font-size: 15px;
+    margin-top: 5px;
+    transition: 0.4s ease-in-out;
+    perspective: 800px;
+    transform-style: preserve-3d;
 }
 .hero_btn:hover{
-    transform: scale(1.05,1.05)  translateZ(-3px);
-    box-shadow: 0px 0px 5px black;
-    background-color: #a37b74ec;;
+    transform:translateY(3px);
+    background-color: #a37b74ec;; 
+    background-color: transparent;
+    border: 2px  #a37b74b3 solid;
+
 }
 .t1{
     
   font-family: "Lobster", sans-serif;
   font-weight: 400;
   font-style: normal;
-
+    color:#a37b74d8;    
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.603);
 
 }
 .sale{
@@ -416,8 +423,9 @@ top:50px;
 .type_container>div{
     width:30%;
     height: 75%;
-   z-index: 2;
-   background-color: #1a1716;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
 }
 .Ladies_photo ,.Gentlemen_photo ,.Couple_photo{
     width: 100%;
@@ -533,7 +541,7 @@ top:50px;
     display: inline-block;
     /* background-color: #2d1d1b; */
     height:60px;
-    border-bottom: 5px #797066 solid;
+    border-bottom: 5px #a37b74b3 solid;
     /* background-color: #2f2926; */
 }
 
@@ -939,37 +947,44 @@ top:50px;
     position:absolute;
     height: 80%;
     width: 85%;
-    top:52%;
+    top:56%;
     left: 50%;
     transform: translate(-50%,-50%);
     display: flex;
     justify-content:space-between;
     align-items: center;
+    
+}
 
-}
-.blog_content a{
-    /* color:whitesmoke; */
-    color: #a87a72ad;;
-    font-size: 17px;
-}
-.Blog_container>div{
+/* .Blog_container>div{
     width:31%;
     height: 80%;
-    /* background-color: #26211f; */
-    border: 1px solid black;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.281);
-}
+} */
+/* 
 .blog_item>div{
+    width: 100%;
     height: 60%;
+    aspect-ratio: 16 / 16;
     margin-bottom: 10px;
+    overflow: hidden;
+} */
+/* .blog_photo1 img{
+    width: 100%;
+    height: 100%;
+   display: block;
+    object-fit: cover;
+   transition: transform 0.6s ease;
+} */
+/* .blog_photo1:hover {
+    transform: scale(1.1);
 }
 .blog_caption{
-    /* color:#9c8b7e; */
+    
     color:#d7cfcc;
     margin-bottom: 5px;
 }
 .blog_item_title{
-    /* color:#d7cfcc; */
+   
     color:#9c8b7e;
     margin-bottom: 10px;
 }
@@ -980,10 +995,7 @@ top:50px;
 .blog_content{
     padding-left: 10px;
 }
-.blog_photo1{
-    background-image: url(../images/download\ \(14\).jpg);
-    background-size: cover;
-}
+
 .blog_photo3{
     background-image: url(../images/blog2.jpg);
     background-size: cover;
@@ -991,6 +1003,53 @@ top:50px;
 .blog_photo2{
     background-image: url(../images/blog3.jpg);
     background-size: cover;
+}
+.blog_photo1:hover{
+    transform: translateZ(5px);
+} */
+.blog_discrip{
+    color: #e4e4e4b9;
+    /* margin-bottom: 20px; */
+    margin-top: 20px;
+}
+.blog_item_title{
+    color:#9c8b7e;
+    font-size: 21px;
+    text-decoration: none;
+    
+    
+}
+
+.blog_caption{
+    display: block;
+    margin-top: 15px;
+    color:#d7cfcc64;
+    margin-bottom: 10px;
+    
+}
+.blog_item{
+    width:32%;
+    height: 100%;
+    perspective: 800px;
+    
+}
+.blog_item:hover .blog_item_title{
+    /* text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.557); */
+    /* color: cornsilk; */
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.557);
+}
+.blog_item img{
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+.blog_item img:hover{
+    transform: translateZ(25px);
+}
+.more{
+    display: block;
+    color:#867568;
+    margin-top: 20px;
 }
 /* ////////////////////////////////////////////////////Delivery///////////////////////////////////////////////////// */
 .Delivery{
@@ -1146,10 +1205,9 @@ footer{
     align-items: center;
     padding-top:30px;
     border-bottom: #ffeeee 1px solid;
+    padding-right: 20px;
 }
-.logo{
-    width: 20%;
-}
+
 .footer_collection
 {
     width: 70%;
@@ -1243,4 +1301,13 @@ footer{
     transform: scaleX(1.1);
     text-decoration: underline;
     color:#ffffff84;
+}
+
+.final_logo{
+    width: 350px;
+    height: 350px;
+   background-image: url(../images/Gemini_Generated_Image_nj5n5hnj5n5hnj5n-removebg-preview.png);
+   background-size: cover;
+   margin-left:-45px;
+   margin-bottom: 25px;
 }
