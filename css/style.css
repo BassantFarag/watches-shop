@@ -603,7 +603,7 @@ top:50px;
     color: #ffeeee;
 
 }
-.collection_content>div::after{
+.collection_item1::after , .collection_item2::after ,.collection_item3::after,.collection_item4::after{
     content: "";
     position:absolute;
     top:0;
@@ -611,14 +611,25 @@ top:50px;
     width:100%;
     height:75%;
     backface-visibility: hidden;
-    /* background-color: #24201e; */
-    background-image: url(../images/Luxuy.jpg);
     background-size: cover;
     z-index:2;
     transform: rotateY(180deg);
     transform-style:preserve-3d;
     transition: 1s;
      border-radius: 10px 10px 0 0 ; 
+}
+.collection_item1::after{
+    background-image: url(../images/col1.jpg);
+}
+.collection_item2::after{
+    background-image: url(../images/col2.jpg);
+   
+}
+.collection_item3::after{
+    background-image: url(../images/col3.jpg);
+}
+.collection_item4::after{
+    background-image: url(../images/col4.jpg);
 }
 .collection_content>div:hover::after
 {
@@ -653,7 +664,7 @@ top:50px;
     height: 50px;
     background-color: #2f2926;
     display: flex;
-    gap:25px;
+    gap:2px;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -663,12 +674,46 @@ top:50px;
     z-index:3;
     opacity: 0;
     transition: .5s ease-in;
+    border-radius: 3px;
+   
 }
 .collection_content>div:hover .col_icon{
     transform: translateY(-7px);
     opacity: 1;
 }
-
+.col_icon li{
+   display: flex;
+   flex:1;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+   border-radius: 3px;
+   /* background-color: #0a0808; */
+}
+.col_icon li a{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .3 ease-in-out;
+    
+}
+.col_icon li:hover{
+    /* background-color: rgba(245, 245, 245, 0.737); */
+    background-color: #e6cfba;;
+    
+}
+.col_icon li:hover i{
+    color: #2f2926;;
+}
+.col_icon li i {
+    font-size:22px;
+}
+.collection_content >div:hover .col_link{
+    color:#ebccaf;
+    text-shadow: 0px 0px 3px rgba(245, 245, 245, 0.632);
+}
 /* ////////////////////////////////////////////////////////////opinion/////////////////////////////////////////////////////////////// */
 .opinion{
 
@@ -768,7 +813,7 @@ top:50px;
     display: inline-block;
     
 }
-/* ////////////////////////////////////////////////////////may like //////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////Black watches //////////////////////////////////////////////////////////// */
 .like{
 
  height: 100vh;
@@ -831,7 +876,7 @@ top:50px;
     text-align: center;
     border-radius: 10px; 
     border: 1px solid rgba(0, 0, 0, 0.2);
-    
+     overflow: hidden;
 }
 .like_item1::after,.like_item2::after,.like_item3::after,.like_item4::after{
     content:"";
@@ -839,8 +884,8 @@ top:50px;
     top:0;
     left:0;
     width:100%;
-    height: 0;
-
+    height: 75%;
+    transform: translateY(-100%);
     transition: .7s;
     opacity: 0;
      border-radius: 10px 10px 0 0 ; 
@@ -863,7 +908,8 @@ top:50px;
 }
 .like_item1:hover::after ,.like_item2:hover::after ,.like_item3:hover::after ,.like_item4:hover::after{
     /* width:100%; */
-    height: 75%;
+    /* height: 75%; */
+    transform: translateY(0);
     opacity: 1;
 }
 .Like_content{
@@ -886,7 +932,6 @@ top:50px;
     height: 50px;
     background-color: #2f2926;
     display: flex;
-    gap:25px;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -896,6 +941,34 @@ top:50px;
     z-index:3;
     opacity: 0;
     transition: .5s ease-in;
+    border-radius: 5px;
+
+}
+.like_icon li{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.like_icon li a i{
+    font-size: 20px;
+}
+.like_icon li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in;
+    border-radius: 5px ;
+}
+.like_container>div:hover .Like_content a{
+    color: black;
+    text-shadow: 0px 0px 3px white;
+}
+.like_icon li a:hover{
+    background-color: #0e0d0d;
 }
 .like_container>div:hover .like_icon{
     transform: translateY(-7px);
@@ -922,6 +995,24 @@ top:50px;
 .like_img4{
     background-image: url(../images/black4_.jpg);
     background-size: cover;
+}
+.L_arrow,.R_arrow{
+    color: #d7cfcc;
+    font-size: 35px;
+    position: absolute;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.484);
+    cursor: pointer;
+}
+.R_arrow{
+    top:55%;
+    right: 40px;
+}
+.L_arrow{
+    top:55%;
+    left:40px;
+}
+.L_arrow:hover,.R_arrow:hover{
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.893);
 }
 /* ////////////////////////////////////////////////////////////Our Blog//////////////////////////////////////////// */
 .Blog{
@@ -956,37 +1047,8 @@ top:50px;
     
 }
 
-/* .Blog_container>div{
-    width:31%;
-    height: 80%;
-} */
-/* 
-.blog_item>div{
-    width: 100%;
-    height: 60%;
-    aspect-ratio: 16 / 16;
-    margin-bottom: 10px;
-    overflow: hidden;
-} */
-/* .blog_photo1 img{
-    width: 100%;
-    height: 100%;
-   display: block;
-    object-fit: cover;
-   transition: transform 0.6s ease;
-} */
-/* .blog_photo1:hover {
-    transform: scale(1.1);
-}
-.blog_caption{
-    
-    color:#d7cfcc;
-    margin-bottom: 5px;
-}
-.blog_item_title{
-   
-    color:#9c8b7e;
-    margin-bottom: 10px;
+.more:hover{
+    transform:  scale(1.05);
 }
 .blog_discrip{
     color: #e4e4e4;
@@ -1006,7 +1068,7 @@ top:50px;
 }
 .blog_photo1:hover{
     transform: translateZ(5px);
-} */
+} 
 .blog_discrip{
     color: #e4e4e4b9;
     /* margin-bottom: 20px; */
@@ -1050,10 +1112,11 @@ top:50px;
     display: block;
     color:#867568;
     margin-top: 20px;
+    transition: .8 ease-in-out;
 }
 /* ////////////////////////////////////////////////////Delivery///////////////////////////////////////////////////// */
 .Delivery{
-     height: 40vh;
+     height: 45vh;
     background: linear-gradient(
     135deg,
     #0e0d0d,
@@ -1087,6 +1150,10 @@ top:50px;
     font-size: 22px;
     margin-top: 15px;
     margin-bottom: 13px;
+    color:white;
+}
+.deliver_item p{
+    color: rgba(198, 198, 198, 0.721);
 }
 .deliver_icon{
     width: 100%;
@@ -1105,7 +1172,8 @@ top:50px;
     transition: 0.1s linear;
 }
 .icon1{
-    color: #9c8b7e;
+    /* color: #9c8b7e; */
+    color:rgba(134, 134, 134, 0.493);
     transform: translateY(0);
 }
 
